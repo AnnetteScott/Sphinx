@@ -13,29 +13,8 @@ channelIDs = {'sphinx':937053360702509126, 'general':936900906488827936, 'links'
 reminderDICT = {}
 
 
-
-
-
 @bot.event
 async def on_message(message):
-    """ if message.content.startswith('!remindMe'):
-        content = message.content.split(", ")
-        name = content[1]
-        date = content[2]
-        how_often = content[3]
-        channel = channelIDs[content[4]]
-        if name in reminderDICT.keys():
-          await message.channel.send(name + ' is already in the database')
-        else:
-
-            reminderDICT[name] = [date, how_often, channel]
-            await message.channel.send('I have added: ' + name + ' to the database')
-    elif message.content.startswith('!DELremind'):
-      content = message.content.split(", ")
-      key = content[1]
-      del reminderDICT[key]
-      await message.channel.send('I have deleted ' + key)
-    else: """
     await bot.process_commands(message)
 
 #Show list of commands
